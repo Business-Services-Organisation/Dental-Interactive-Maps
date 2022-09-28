@@ -2,7 +2,7 @@
 
 This repository includes a number of R scripts used to produce widget maps showing various aspects of Dental Services in Northern Ireland; including the locations of dental practices and the population weighted average distance to them, dental registration rates and dental treatment rates by children and adults from the BSO General Dental Services Statistics. 
 
-Created using leaflet and html widgets packages in RStudio. 
+Base data is read from SQL Server along with Geojson files. R scripts then uses leaflet and html widgets packages in RStudio to create the following maps. 
 
 http://www.healthandcareni.net/maps/DentalRegSOAMar22.html \
 http://www.healthandcareni.net/maps/DentalworkSOA2022Child.html \
