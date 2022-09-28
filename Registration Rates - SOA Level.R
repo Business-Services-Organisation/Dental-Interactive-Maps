@@ -45,7 +45,7 @@ Dental_reg$U18_RegRate = ifelse(Dental_reg$U18_RegRate>1,1,Dental_reg$U18_RegRat
 Dental_reg$O18_RegRate = ifelse(Dental_reg$O18_RegRate>1,1,Dental_reg$O18_RegRate)
 Dental_reg$RegRate = ifelse(Dental_reg$RegRate>1,1,Dental_reg$RegRate)
 
-###Merge Super Output Areas geojson and Dental Reg Rate data together 
+###Merge Small Areas geojson and Dental Reg Rate data together 
 soa_poly_dental <- merge(SOA_poly,Dental_reg[Dental_reg$date==202203,], by.x="SOA_CODE", by.y="SOA2001")
 
 ###create labels and colour formatting for leaflet map
@@ -150,3 +150,7 @@ m <- leaflet() %>%
 #save map as widget
 saveWidget(m, file="DentalRegSOAMar22.html",title = "Dental Registration Rate by SOA March 2022",
            selfcontained = TRUE)
+
+
+
+

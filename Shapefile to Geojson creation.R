@@ -96,3 +96,5 @@ rm(SOA_poly, SOA_P)
 
 SOApoly_simplify <-ms_simplify(SOA_poly_json)
 geojson_write(SOApoly_simplify, file = "SOA.geojson")
+
+
