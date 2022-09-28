@@ -42,7 +42,7 @@ Dental_work <-  sqlQuery(dbconnection,paste("SELECT * FROM genp.Publication.Dent
                                             where FinancialYear = '2021-22';"))
 
 
-###Merge Small Areas geojson and Dental Treatment Rates for adults data together 
+###Merge Super Output Areas geojson and Dental Treatment Rates for adults data together 
 soa_poly_dental <- merge(SOA_poly,Dental_work, by.x="SOA_CODE", by.y="SOA2001")
 
 
