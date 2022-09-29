@@ -10,7 +10,7 @@ http://www.healthandcareni.net/maps/DentalworkSOA2022Adults.html \
 http://www.healthandcareni.net/maps/Distance_to_Nearest_Dental_Practice_22.html 
 
 
-This is developed and maintained by Information Unit in Business Services Organisation Family Practitioner Service.
+This is developed and maintained by Information Unit in Business Services Organisation Family Practitioner Services.
 
 For more information on this code please contact <Info.BSO@hscni.net>
 
@@ -19,7 +19,7 @@ For more information on this code please contact <Info.BSO@hscni.net>
 ## Installation and use:
 
 
-You will need to create the Geojson files in RStudio the first time you go to create the maps. The 'Shapefile to Geojson creation.R' should be run first. This only needs run the first time as it saves the geojson files in your local network directory.
+You will need to create the Geojson files in RStudio the first time you go to create the maps. The 'Shapefile to Geojson creation.R' should be run first. This only needs run the first time as it saves the geojson files in your local network directory. The geojson files for Northern Ireland used in creating these maps have been included in this repository also. 
 
 Once these are created the following scripts are used to create the maps:  
 
