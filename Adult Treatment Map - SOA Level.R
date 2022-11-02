@@ -11,6 +11,7 @@
 # install.packages("rmapshaper")
 # install.packages("RODBC")
 # install.packages("proj4")
+# install.packages("rgdal")
 
 
 library(leaflet)
@@ -21,6 +22,7 @@ library(geojsonio)
 library(rmapshaper)
 library(RODBC)
 library(proj4)
+library(rgdal)
 
 ##Removes all objects from the current workspace (R memory). May prompt R to return memory to the operating system.
 rm(list = ls())
