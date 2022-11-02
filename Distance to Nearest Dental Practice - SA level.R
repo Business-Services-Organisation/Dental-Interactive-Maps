@@ -11,6 +11,7 @@
 # install.packages("rmapshaper")
 # install.packages("RODBC")
 # install.packages("proj4")
+# install.packages("rgdal")
 
 
 library(leaflet)
@@ -21,6 +22,7 @@ library(geojsonio)
 library(rmapshaper)
 library(RODBC)
 library(proj4)
+library(rgdal)
 
 
 
@@ -39,7 +41,7 @@ lcg <- geojsonio::geojson_read("GeoJsons/LCG.geojson", what = "sp")
 
 
 ###Read data from SQL which indicates average distance to nearest dental practice by Small Areas.
-bconnection  <- odbcDriverConnect(c("Driver=SQL Server;Server=server_name; Database=database_name;Uid=" , Sys.getenv("USERNAME") , "; trusted_connection=yes"))
+dbconnection  <- odbcDriverConnect(c("Driver=SQL Server;Server=server_name; Database=database_name;Uid=" , Sys.getenv("USERNAME") , "; trusted_connection=yes"))
 Dental_dist <-  sqlQuery(dbconnection,paste("SELECT * FROM Publication.Dental_Distance_to_Nearest_dentist_SA;"))
 
 Dentist_location <-  sqlQuery(dbconnection,paste("SELECT s.*, p.lat,p.long  FROM [Publication].[dental_surgeries] s
