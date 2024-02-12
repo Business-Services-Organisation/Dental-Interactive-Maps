@@ -10,7 +10,6 @@
 # install.packages("rmapshaper")
 # install.packages("RODBC")
 # install.packages("proj4")
-# install.packages("rgdal")
 
 
 library(leaflet)
@@ -21,7 +20,6 @@ library(geojsonio)
 library(rmapshaper)
 library(RODBC)
 library(proj4)
-library(rgdal)
 
 
 
@@ -41,7 +39,7 @@ lcg <- geojsonio::geojson_read("GeoJsons/LCG.geojson", what = "sp")
 
 
 ###Read data from SQL which indicates childrens dental treatment rate by Super Output Area.
-dbconnection  <- odbcDriverConnect(c("Driver=SQL Server;Server=server_name; Database=databaase_name;Uid=" , Sys.getenv("USERNAME") , "; trusted_connection=yes"))
+dbconnection  <- odbcDriverConnect(c("Driver=SQL Server;Server=server_name; Database=database_name;Uid=" , Sys.getenv("USERNAME") , "; trusted_connection=yes"))
 Dental_work <-  sqlQuery(dbconnection,paste("SELECT * FROM Publication.Dental_TreatmentRate_SOA
                                             where FinancialYear = '2021-22';"))
 
